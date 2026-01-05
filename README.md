@@ -116,9 +116,8 @@ Contributions are welcome! Here's how you can contribute:
 
 ## 📢 Notice
 
-As of February 2025, the user limit of 500 has been exceeded. To test the website, you can log in using the following account:
-- Email: test@mail.com
-- Password: test@@123456
+As of February 2025, the website has exceeded its maximum user limit (500 users).
+To continue testing the project, please fork the repository, set up the required environment variables, and run it locally.
 
 ## 📬 Contact
 
