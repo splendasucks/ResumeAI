@@ -23,21 +23,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      afterSignOutUrl="/"
-      appearance={{
-        layout: {
-          socialButtonsPlacement: "bottom",
-          logoImageUrl: "/icons/logo.svg",
-        },
-      }}
-    >
-      <html lang="en">
-        <body className={`${inter.variable} ${nunito.variable} font-inter`}>
+    <html lang="en">
+      <body className={`${inter.variable} ${nunito.variable} font-inter`}>
+        <ClerkProvider
+          afterSignOutUrl="/"
+          appearance={{
+            layout: {
+              socialButtonsPlacement: "bottom",
+              logoImageUrl: "/icons/logo.svg",
+            },
+          }}
+        >
           <Providers>{children}</Providers>
           <Toaster />
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }

@@ -1,12 +1,9 @@
 import { SignUp } from "@clerk/nextjs";
-import React from "react";
 
-const Page = () => {
+export default function SignUpPage() {
   return (
     <div className="flex h-screen items-center justify-center flex-col p-10">
-      <SignUp forceRedirectUrl={"/dashboard"} routing="hash" />
+      <SignUp routing="path" path="/sign-up" forceRedirectUrl="/dashboard" />
     </div>
   );
-};
-
-export default Page;
+}

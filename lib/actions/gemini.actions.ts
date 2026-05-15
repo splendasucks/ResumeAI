@@ -1,16 +1,20 @@
 "use server";
 
-import {
-  GoogleGenerativeAI,
-  HarmCategory,
-  HarmBlockThreshold,
-} from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import { getServerEnv } from "@/lib/env";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+let geminiModel: ReturnType<GoogleGenerativeAI["getGenerativeModel"]> | null =
+  null;
 
-const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash",
-});
+function getGeminiModel() {
+  if (!geminiModel) {
+    const genAI = new GoogleGenerativeAI(getServerEnv().GEMINI_API_KEY);
+    geminiModel = genAI.getGenerativeModel({
+      model: "gemini-2.0-flash",
+    });
+  }
+  return geminiModel;
+}
 
 const generationConfig = {
   temperature: 1,
@@ -22,7 +26,7 @@ const generationConfig = {
 };
 
 async function askGemini(prompt: string) {
-  const chatSession = model.startChat({
+  const chatSession = getGeminiModel().startChat({
     generationConfig,
     history: [],
   });

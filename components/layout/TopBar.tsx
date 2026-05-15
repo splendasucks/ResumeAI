@@ -5,11 +5,11 @@ import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { useRouter } from "next-nprogress-bar";
-import { UserButton, useUser } from "@clerk/nextjs";
+import { SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 
 const TopBar = () => {
   const router = useRouter();
-  const user = useUser();
+  const { isLoaded, isSignedIn } = useUser();
 
   return (
     <div className="flex w-full justify-between items-center py-3 px-5 shadow-md">
@@ -20,7 +20,7 @@ const TopBar = () => {
         </p>
       </Link>
 
-      {user ? (
+      {isLoaded && isSignedIn ? (
         <div className="flex gap-3 items-center">
           <Button
             variant="outline"
@@ -32,16 +32,11 @@ const TopBar = () => {
           </Button>
           <UserButton />
         </div>
-      ) : (
-        <Button
-          className="btn btn-primary"
-          onClick={() => {
-            router.push("/sign-up");
-          }}
-        >
-          Get Started
-        </Button>
-      )}
+      ) : isLoaded ? (
+        <SignUpButton mode="redirect">
+          <Button className="btn btn-primary">Get Started</Button>
+        </SignUpButton>
+      ) : null}
     </div>
   );
 };

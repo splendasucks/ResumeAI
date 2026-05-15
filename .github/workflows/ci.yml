@@ -1,0 +1,46 @@
+# CI: tests (no secrets), Clerk production key guard, then build with Doppler `dev` config.
+# Prerequisites: add repository secret `DOPPLER_TOKEN` (read-only token for project `resumeai`; needs `prd` read for Clerk verify step).
+# Optional: Doppler → GitHub sync (https://docs.doppler.com/docs/github-actions) mirrors app secrets so you can drop explicit `doppler run` if you prefer env-only.
+# Optional: Vercel deploy from CI requires `VERCEL_TOKEN` plus `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` (or link once and commit `.vercel` — not recommended). Prefer Vercel Git integration + Doppler → Vercel sync for production env vars.
+
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - uses: dopplerhq/cli-action@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Verify Clerk production keys (Doppler prd)
+        run: |
+          ALLOW=$(doppler secrets get CLERK_ALLOW_DEVELOPMENT_KEYS --project resumeai --config prd --plain 2>/dev/null || echo "")
+          if [[ "$ALLOW" == "true" ]]; then
+            echo "Skipping: CLERK_ALLOW_DEVELOPMENT_KEYS=true (temporary dev keys on public deploy)."
+            exit 0
+          fi
+          ./scripts/verify-clerk-production.sh prd
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
+
+      - name: Production build (Doppler secrets)
+        run: doppler run --project resumeai --config dev -- npm run build:next
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}

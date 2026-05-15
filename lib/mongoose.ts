@@ -1,20 +1,19 @@
 import mongoose from "mongoose";
+import { getServerEnv } from "./env";
 
 let isConnected = false;
 
 export const connectToDB = async () => {
   mongoose.set("strictQuery", true);
 
-  if (!process.env.MONGODB_URL) {
-    return console.error("MongoDB URL not found");
-  }
+  const { MONGODB_URL } = getServerEnv();
 
   if (isConnected) {
     return;
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URL);
+    await mongoose.connect(MONGODB_URL);
     isConnected = true;
     console.log("MongoDB connected");
   } catch (error) {

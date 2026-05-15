@@ -34,6 +34,12 @@ const ResumeCard = ({
   resume: any;
   refreshResumes: () => void;
 }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const [openAlert, setOpenAlert] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
   if (!resume) {
     return (
       <div className="!bg-slate-200/30 relative aspect-[1/1.2] rounded-lg shadow-lg flex flex-col hover:scale-105 transition-all skeleton">
@@ -45,12 +51,7 @@ const ResumeCard = ({
     );
   }
 
-  const router = useRouter();
-  const pathname = usePathname();
   const myResume = JSON.parse(resume);
-  const [openAlert, setOpenAlert] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast();
 
   const onDelete = async () => {
     setIsLoading(true);
@@ -91,7 +92,7 @@ const ResumeCard = ({
           }}
         >
           <div className="flex size-full items-center justify-center">
-            <img src="/img/blank-cv.png" width={80} height={80} />
+            <img src="/img/blank-cv.png" width={80} height={80} alt="" />
           </div>
         </div>
       </Link>

@@ -94,7 +94,7 @@ GEMINI_API_KEY=
 BASE_URL=localhost:3000
 ```
 
-Replace the placeholder values with your actual credentials. You can obtain these credentials by signing up for the corresponding websites on [Clerk](https://clerk.com/), [MongoDB](https://mongodb.com/) and [Google AI Studio](https://aistudio.google.com/app/apikey). 
+Replace the placeholder values with your actual credentials. You can obtain these credentials by signing up for the corresponding websites on [Clerk](https://clerk.com/), [MongoDB](https://mongodb.com/) and [Google AI Studio](https://aistudio.google.com/app/apikey).
 
 ### Running the Project
 
@@ -114,10 +114,15 @@ Contributions are welcome! Here's how you can contribute:
 - Push to the branch (`git push origin feature/AmazingFeature`).
 - Open a pull request.
 
-## 📢 Notice
+## 📄 Using ResumeAI (resumes & template-style best practices)
 
-As of February 2025, the website has exceeded its maximum user limit (500 users).
-To continue testing the project, please fork the repository, set up the required environment variables, and run it locally.
+Full walkthrough: **[docs/user-guide-resumes-and-standard-templates.md](docs/user-guide-resumes-and-standard-templates.md)** — creating and editing resumes, AI tips, PDF/share, and how to align content with professional template habits (e.g. [Standard Resume templates](https://standardresume.co/resume-templates)).
+
+## 📢 Notice (Clerk 500-user limit)
+
+The public demo hit Clerk’s **Development** instance limit (500 users). To sign in on your own deployment you need **Clerk Production** keys (`pk_live_` / `sk_live_`), not Development (`pk_test_` / `sk_test_`).
+
+See [docs/clerk-production.md](docs/clerk-production.md) and run `./scripts/apply-clerk-production.sh` after creating a Production instance in the [Clerk Dashboard](https://dashboard.clerk.com/). Until you have a custom domain, the **temporary Development** path is documented there (`CLERK_ALLOW_DEVELOPMENT_KEYS`, `./scripts/apply-clerk-development.sh`).
 
 ## 📬 Contact
 

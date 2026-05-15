@@ -90,7 +90,7 @@ const FinalResumeView: React.FC<FinalResumeViewProps> = ({
                     Resume Preview
                   </h2>
                   <p className="text-center text-gray-600">
-                    You are currently viewing a preview of someone else's
+                    You are currently viewing a preview of someone else&apos;s
                     resume.
                   </p>
                 </>

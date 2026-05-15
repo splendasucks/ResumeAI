@@ -6,7 +6,7 @@ import { ArrowBigUp, AtomIcon, Edit, Share2 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const HomePage = () => {
   const user = useUser();
 
   return (
@@ -125,4 +125,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default HomePage;

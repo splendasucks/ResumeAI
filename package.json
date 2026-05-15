@@ -3,13 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev:next": "next dev",
+    "dev": "doppler run -- npm run dev:next",
+    "dev:raw": "next dev",
+    "build:next": "next build",
+    "build": "doppler run -- npm run build:next",
+    "build:raw": "next build",
+    "start:next": "next start",
+    "start": "doppler run -- npm run start:next",
+    "start:raw": "next start",
+    "lint": "next lint",
+    "lint:lib": "next lint --dir lib",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy": "doppler run --config prd -- vercel deploy --prod --yes",
+    "clerk:verify": "bash scripts/verify-clerk-production.sh prd",
+    "clerk:apply-production": "bash scripts/apply-clerk-production.sh",
+    "clerk:apply-development": "bash scripts/apply-clerk-development.sh",
+    "clerk:verify-development": "bash scripts/verify-clerk-development.sh prd"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.7.5",
+    "@clerk/nextjs": "^6.39.3",
     "@clerk/themes": "^2.1.10",
     "@google/generative-ai": "^0.14.1",
     "@hookform/resolvers": "^3.9.0",
@@ -48,8 +62,12 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^10.0.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^41.7.8",
+    "vitest": "^3.2.4"
   }
 }

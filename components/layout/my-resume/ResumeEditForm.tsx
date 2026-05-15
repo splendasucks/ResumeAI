@@ -27,14 +27,14 @@ const ResumeEditForm = ({
   params: { id: string };
   userId: string | undefined;
 }) => {
-  if (!userId) {
-    return null;
-  }
-
   const router = useRouter();
   const { toast } = useToast();
   const { formData, activeFormIndex, setActiveFormIndex } = useFormContext();
   const [isLoading, setIsLoading] = React.useState(false);
+
+  if (!userId) {
+    return null;
+  }
 
   return (
     <div className="flex flex-col gap-5">
