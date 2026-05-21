@@ -1,6 +1,5 @@
 "use server";
 
-import { useUser } from "@clerk/nextjs";
 import Education from "../models/education.model";
 import Experience from "../models/experience.model";
 import Resume from "../models/resume.model";
@@ -69,6 +68,24 @@ export async function fetchUserResumes(userId: string) {
 
     return JSON.stringify(resumes);
   } catch (error: any) {
+    // #region agent log
+    fetch("http://127.0.0.1:7830/ingest/c357e084-9847-4c11-997e-68e2cfaa8db9", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Debug-Session-Id": "467421",
+      },
+      body: JSON.stringify({
+        sessionId: "467421",
+        location: "lib/actions/resume.actions.ts:fetchUserResumes",
+        message: "fetchUserResumes failed",
+        data: { errorMessage: error.message },
+        hypothesisId: "H1",
+        timestamp: Date.now(),
+        runId: "pre-fix",
+      }),
+    }).catch(() => {});
+    // #endregion
     throw new Error(`Failed to fetch user resumes: ${error.message}`);
   }
 }
@@ -138,6 +155,8 @@ export async function addExperienceToResume(
   experienceDataArray: any
 ) {
   try {
+    await connectToDB();
+
     const resume = await Resume.findOne({ resumeId: resumeId });
 
     if (!resume) {
@@ -180,6 +199,8 @@ export async function addEducationToResume(
   educationDataArray: any
 ) {
   try {
+    await connectToDB();
+
     const resume = await Resume.findOne({ resumeId: resumeId });
 
     if (!resume) {
@@ -220,6 +241,8 @@ export async function addSkillToResume(
   skillDataArray: any
 ) {
   try {
+    await connectToDB();
+
     const resume = await Resume.findOne({ resumeId: resumeId });
 
     if (!resume) {

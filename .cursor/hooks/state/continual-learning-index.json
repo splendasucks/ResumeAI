@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "transcripts": {
+    "155c86a0-5087-43b1-b0e4-3d6e15a43f3f": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/155c86a0-5087-43b1-b0e4-3d6e15a43f3f/155c86a0-5087-43b1-b0e4-3d6e15a43f3f.jsonl",
+      "mtimeMs": 1778999565000,
+      "lastProcessedAtMs": 1779335112761
+    },
+    "1effe735-fd36-45a7-adae-9cc1831aa1d1": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/1effe735-fd36-45a7-adae-9cc1831aa1d1/1effe735-fd36-45a7-adae-9cc1831aa1d1.jsonl",
+      "mtimeMs": 1779335015000,
+      "lastProcessedAtMs": 1779335112761
+    },
+    "4674212d-d71f-4b93-b849-5cfa3ebb3dd1": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/4674212d-d71f-4b93-b849-5cfa3ebb3dd1/4674212d-d71f-4b93-b849-5cfa3ebb3dd1.jsonl",
+      "mtimeMs": 1779045100000,
+      "lastProcessedAtMs": 1779335112761
+    },
+    "55effc7c-5cee-46cf-b234-beeae4fd98e9": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/55effc7c-5cee-46cf-b234-beeae4fd98e9/55effc7c-5cee-46cf-b234-beeae4fd98e9.jsonl",
+      "mtimeMs": 1778984545000,
+      "lastProcessedAtMs": 1779335112761
+    },
+    "753308ba-2f38-4010-b526-c57d35b31434": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/753308ba-2f38-4010-b526-c57d35b31434/753308ba-2f38-4010-b526-c57d35b31434.jsonl",
+      "mtimeMs": 1778985448000,
+      "lastProcessedAtMs": 1779335112761
+    },
+    "f04445d8-b1cf-41ce-a20d-471b68791786": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/f04445d8-b1cf-41ce-a20d-471b68791786/f04445d8-b1cf-41ce-a20d-471b68791786.jsonl",
+      "mtimeMs": 1778676326000,
+      "lastProcessedAtMs": 1779335112761
+    },
+    "f921512f-3a49-4c11-8cff-25b67f13cffd": {
+      "path": "/Users/chris/.cursor/projects/Users-chris-Repos-ResumeAI/agent-transcripts/f921512f-3a49-4c11-8cff-25b67f13cffd/f921512f-3a49-4c11-8cff-25b67f13cffd.jsonl",
+      "mtimeMs": 1779260830000,
+      "lastProcessedAtMs": 1779335112761
+    }
+  }
+}

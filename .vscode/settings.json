@@ -1,0 +1,8 @@
+{
+   "doppler.autocomplete.enable": true,
+   "doppler.hover.enable": true,
+   "files.autoSave": "afterDelay",
+   "editor.cursorStyle": "block",
+   "editor.insertSpaces": true,
+   "editor.wordWrap": "off"
+}
