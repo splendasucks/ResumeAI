@@ -14,7 +14,7 @@
 /out/
 
 # production
-# /build
+ /build
 
 # misc
 .DS_Store
@@ -26,9 +26,11 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-# .env*.local
+ .env*.local
 
 # .env
+.env
+.env.local
 
 # vercel
 .vercel
@@ -36,3 +38,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+npower_resume_examples/
