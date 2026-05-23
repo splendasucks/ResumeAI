@@ -1,0 +1,149 @@
+{
+  "firstName": "Christopher",
+  "lastName": "Zizi",
+  "jobTitle": "IT Support Specialist | Help Desk Technician",
+  "address": "6201 Hollywood Blvd, Los Angeles, CA 90028",
+  "phone": "213-399-6378",
+  "email": "chriszizi@icloud.com",
+  "themeColor": "#2A3FFB",
+  "summary": "Detail-oriented IT Support Specialist and emerging technology professional with 5+ years of experience in technical troubleshooting, digital operations, and customer-facing support roles. Completed NPower IT Support Specialist program (360-hour live-virtual training) with hands-on coursework in Windows, Linux, and macOS administration, networking fundamentals (TCP/IP, DNS, DHCP, VPN), hardware/software troubleshooting, OS imaging, and remote desktop support. Google IT Support by Google on Coursera — certificate earned May 22, 2026. Proficient in Google Workspace administration, Microsoft 365, and AI-assisted workflow automation. Currently pursuing CompTIA Tech+. Proven track record of maintaining 95–99% accuracy and satisfaction rates in high-volume technical and operational environments. Seeking an entry-level IT Support, Help Desk, or Desktop Support role.",
+  "experience": [
+    {
+      "title": "Digital Marketing Consultant & IT Administrator",
+      "companyName": "Masterclass Roofing",
+      "city": "Los Angeles",
+      "state": "CA",
+      "startDate": "Jul 2024",
+      "endDate": "Jan 2025",
+      "workSummary": "<ul><li>Administered and maintained company website including domain management, web hosting configuration, and ongoing platform reliability and uptime monitoring</li><li>Managed Google Workspace accounts, email systems, and digital collaboration tools for full business operations</li><li>Implemented SEO optimization and Google Analytics tracking, improving online visibility and inbound customer engagement</li><li>Leveraged AI-assisted tools (ChatGPT, Claude, Gemini) to streamline content generation, digital operations, and administrative workflows</li><li>Diagnosed and resolved recurring technical issues across CMS, hosting, and analytics integrations</li></ul>"
+    },
+    {
+      "title": "IT Support Specialist Trainee",
+      "companyName": "NPower",
+      "city": "Los Angeles",
+      "state": "CA",
+      "startDate": "Feb 2026",
+      "endDate": "Jun 2026",
+      "workSummary": "<ul><li>Enrolled in IT Support Specialist program: 360 hours of live-virtual instruction (20 hrs/week) via Zoom, Feb 2026–Jun 2026</li><li>Training aligned to CompTIA Tech+, Google IT Support Specialist, Microsoft Azure Fundamentals, and Adobe AI certification pathways</li><li>Gained hands-on experience with Windows 10/11, macOS, and Linux; performed OS imaging, patch management, backups, and malware prevention</li><li>Studied TCP/IP, DNS, DHCP, VPN, LAN/WAN, routing, switching, wireless networking, and help desk support scenarios</li><li>Participated in mentorship and professional development with technology industry partners</li></ul>"
+    },
+    {
+      "title": "Customer Service Representative",
+      "companyName": "Chicken Guy",
+      "city": "Los Angeles",
+      "state": "CA",
+      "startDate": "Sep 2024",
+      "endDate": "Feb 2025",
+      "workSummary": "<ul><li>Processed 100+ customer orders daily with 98% satisfaction rating using POS and digital ordering systems</li><li>Troubleshot digital ordering equipment and coordinated with team across multiple departments for accurate fulfillment</li><li>Maintained accurate documentation and handled sensitive customer data in compliance with privacy standards</li></ul>"
+    },
+    {
+      "title": "Target Technology Sales Representative",
+      "companyName": "MarketSource Inc.",
+      "city": "Los Angeles",
+      "state": "CA",
+      "startDate": "Nov 2023",
+      "endDate": "Jan 2024",
+      "workSummary": "<ul><li>Provided technical product recommendations for consumer electronics, mobile devices, and accessories to 95% customer satisfaction</li><li>Educated customers on device features, account setup, and digital technology solutions</li><li>Exceeded sales and performance metrics by 15–20% through effective technical communication</li><li>Protected confidential customer information during account services and multi-item technology transactions</li></ul>"
+    },
+    {
+      "title": "Fulfillment & Inventory Associate",
+      "companyName": "Cheef Botanicals",
+      "city": "Commerce",
+      "state": "CA",
+      "startDate": "Jun 2019",
+      "endDate": "Jan 2020",
+      "workSummary": "<ul><li>Processed 200+ daily orders with 99.8% accuracy using inventory management and fulfillment software systems</li><li>Reduced fulfillment errors by 25% through systematic workflow optimization and process documentation</li><li>Maintained compliance-related product labeling and detailed inventory records</li></ul>"
+    }
+  ],
+  "education": [
+    {
+      "universityName": "NPower IT Support Specialist Program",
+      "degree": "Technical & Professional Development Certificate",
+      "major": "IT Support Specialist",
+      "startDate": "Feb 2026",
+      "endDate": "Jun 2026",
+      "description": "18-week, 360-hour live-virtual program (Feb 3–Jun 12, 2026) covering CompTIA Tech+, Google IT Support Specialist, Microsoft Azure Fundamentals, and Adobe AI certification pathways. Department of Veterans Affairs enrollment verified."
+    },
+    {
+      "universityName": "Glendale Community College",
+      "degree": "Certificate",
+      "major": "Graphic Design",
+      "startDate": "Jan 2020",
+      "endDate": "May 2022",
+      "description": "Studied visual design principles, digital media production, and creative software including Adobe Creative Suite."
+    },
+    {
+      "universityName": "ICON Collective College of Music Production",
+      "degree": "Certificate",
+      "major": "Music Production & Audio Technology",
+      "startDate": "Jan 2019",
+      "endDate": "Jan 2020",
+      "description": "Hands-on training in digital audio workstations, signal processing, and creative technology tools."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Windows 10/11 Administration",
+      "rating": 4
+    },
+    {
+      "name": "macOS & Linux Fundamentals",
+      "rating": 3
+    },
+    {
+      "name": "Hardware Troubleshooting",
+      "rating": 4
+    },
+    {
+      "name": "Help Desk & End-User Support",
+      "rating": 4
+    },
+    {
+      "name": "TCP/IP, DNS, DHCP, VPN",
+      "rating": 3
+    },
+    {
+      "name": "Google Workspace Admin",
+      "rating": 4
+    },
+    {
+      "name": "Microsoft 365",
+      "rating": 4
+    },
+    {
+      "name": "Remote Desktop Support (RDP)",
+      "rating": 3
+    },
+    {
+      "name": "OS Imaging & System Maintenance",
+      "rating": 3
+    },
+    {
+      "name": "AI Workflow Automation",
+      "rating": 5
+    },
+    {
+      "name": "Ticketing Systems & Documentation",
+      "rating": 3
+    },
+    {
+      "name": "Adobe Creative Suite",
+      "rating": 4
+    }
+  ],
+  "linkedin": "https://www.linkedin.com/in/czizi/",
+  "certifications": [
+    "Google IT Support by Google on Coursera. Certificate earned at May 22, 2026",
+    "NPower IT Support Specialist Program — Certificate of Completion (June 2026)",
+    "CompTIA Tech+ (In Progress)"
+  ],
+  "projects": [
+    {
+      "name": "AI Workflow Optimization & Digital Automation",
+      "description": "Designed and deployed AI-assisted workflow systems using ChatGPT, Claude, and Gemini for content generation, business communication, and productivity. Researched prompt engineering strategies and implemented automation-oriented pipelines to improve operational efficiency for small business environments."
+    },
+    {
+      "name": "Website Administration & Technical Support",
+      "description": "Built and maintained business websites using modern CMS platforms. Configured domains, web hosting, Google Analytics integrations, and administrative tools. Performed ongoing technical troubleshooting, system updates, and performance optimization."
+    }
+  ]
+}
